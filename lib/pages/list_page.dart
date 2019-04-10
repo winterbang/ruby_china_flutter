@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+import 'dart:async';
 import 'package:ruby_china/store/main.dart';
 // import 'package:ruby_china/store/action.dart';
 import 'package:ruby_china/api/topics_api.dart';
@@ -29,7 +30,7 @@ class _TheState extends State<ListPage> {
       }
     });
   }
-  Future<Null> _pullToRefresh() async {
+  Future<void> _pullToRefresh() async {
     TopicsApi.fetchTopics({});
     return null;
   }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:ruby_china/store/main.dart';
-
+import 'dart:async';
 import 'package:ruby_china/api/topics_api.dart';
 import 'package:ruby_china/widgets/item.dart';
 
@@ -12,7 +12,7 @@ class WorksPage extends StatefulWidget {
 
 class _TheState extends State<WorksPage> {
 
-  Future<Null> _pullToRefresh() async {
+  Future<void> _pullToRefresh() async {
 //    curPage = 1;
 //    getNewsList(false);
     TopicsApi.fetchWorks();
